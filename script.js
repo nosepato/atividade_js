@@ -41,3 +41,49 @@ function tabuada(){
 }
 
 //4ª Questão
+function obterDia(){
+    let n = parseInt(document.querySelector('#n').value);
+    switch(n) {
+        case 1:
+            return "Domingo";
+        case 2:
+            return "Segunda-feira";
+        case 3:
+            return "Terça-feira";
+        case 4:
+            return "Quarta-feira";
+        case 5:
+            return "Quinta-feira";
+        case 6:
+            return "Sexta-feira";
+        case 7:
+            return "Sábado";
+        default:
+            return "Número inválido. Informe um número de 1 a 7.";
+    }
+}
+
+function mostrarDia(){
+    let nEscolhido = document.getElementById("n").value;
+    let resultado4 = document.getElementById("resultado4");
+    let dia = obterDia(parseInt(nEscolhido));
+
+    resultado4.textContent = "O dia conrrespondente ao número " + nEscolhido + " é: " + dia;
+}
+
+//5ª Questão
+function notas(){
+    let n1 = parseFloat(document.getElementById("n1").value);
+    let n2 = parseFloat(document.getElementById("n2").value);
+    let n3 = parseFloat(document.getElementById("n3").value);
+    let n4 = parseFloat(document.getElementById("n4").value);
+    const media = (n1+n2+n3+n4)/4;
+
+    let result = document.getElementById("resultado5");
+
+    if(media>6){
+        result.textContent = "Sua média foi " + media + " , Aprovado!"
+    } else{
+        result.textContent = "Sua média foi " + media + " , Reprovado!"
+    }
+}
