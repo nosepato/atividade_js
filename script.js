@@ -87,3 +87,21 @@ function notas(){
         result.textContent = "Sua média foi " + media + " , Reprovado!"
     }
 }
+
+//Bônus
+function verificar(){
+    let numero = parseInt(document.getElementById('np').value);
+    let res = isPrimo(numero) ? 'É um número primo!' : 'Não é um número primo.';
+
+    document.getElementById('resultado6').innerHTML = res;
+}
+
+function isPrimo(numero) {
+    if (numero <= 1) return false;
+    for (var i = 2; i <= Math.sqrt(numero); i++) {
+      if (numero % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
